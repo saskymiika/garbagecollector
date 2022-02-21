@@ -301,6 +301,11 @@ fecth('/movies')
 > BUT: if you skip handling the data, the risk of errors increase.
 > To make sure that we are always using the right data format we can use `ChildProps` constructor.
 
+### ChildProps constructor
+```
+new ChildProps(<string textvalue>, <string elementtype>, <object attributesobject>, <object eventobject>)
+```
+
 ## Attribute behavior
 > Attributes can be set to any element of choice and they will behave the normal way.
 > BUT if we attempt to set multiple ids with the same value, the value will be modified with 'dash' and 'number'.
