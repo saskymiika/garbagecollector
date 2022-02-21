@@ -1,6 +1,6 @@
 
 # Custom JavaScript library for DOM manipulation.
-## Work in progress...
+## This library is a work in progress and will be updated frequently or when ever I get new ideas of usefull features
 
 ### How to use:
 
