@@ -295,7 +295,7 @@ app2.attrbs({id: 'main-container', class: 'container'})
 */
 ```
 
-> If we set an attribute with property 'event', we can assing an event, and callback function rigiht into the attribute.
+> If we set an attribute with property name 'event', we can assing an event to the element.
 > The event must be passed as an event object with properties 'name' and 'callback' as shown below:
 ```
 // EXAMPLE:
