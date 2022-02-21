@@ -22,7 +22,7 @@ parent.parentOf(app)
 or
 actual DOM element like `document.getElementById('app')`
 
-> You can append multiple child elements to the element with parentOf(), if you pass the child elements into an array.
+> You can append multiple child elements to the element with `parentOf()` method, if you pass the child elements into an array.
 ```
 // EXAMPLE
 // append child elements with parentOf() method
