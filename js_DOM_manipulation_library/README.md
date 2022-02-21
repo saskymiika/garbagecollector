@@ -211,10 +211,10 @@ OUTPUT:
       <a id="link" class="list-link" href="https://example1.com">First</a>
     </li>
     <li id="this-works-too" class="ul-list-item">
-      <a id="link-2" class="list-link" href="https://example2.com">Second</a>
+      <a id="link-1" class="list-link" href="https://example2.com">Second</a>
     </li>
     <li id="this-works-too" class="ul-list-item">
-      <a id="link-3" class="list-link" href="https://example3.com">Third</a>
+      <a id="link-2" class="list-link" href="https://example3.com">Third</a>
     </li>
   </ul>
 </div>
