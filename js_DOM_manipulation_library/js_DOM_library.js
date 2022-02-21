@@ -379,3 +379,20 @@ const elem = (elemtype, value) => {
     }
     return element 
 }
+
+class ChildProps {
+    constructor(text, type, attributes, event) {
+        if(typeof attributes != 'object' || Array.isArray(attributes)) {
+            console.error('ChildProps constructor:\n invalid structure in attributes property')
+        }
+        if(event && !event.name && !event.callback) {
+            console.error('ChildProps constructor:\n event object has invalid properties')
+        }
+        this.text = text,
+        this.type = type,
+        this.attributes = attributes && typeof attributes === 'object' ? attributes : null, 
+        this.event = event && typeof event === 'object' && event.name && 
+                    typeof event.name === 'string' && event.callback 
+                    && event.callback instanceof Function ? event : null
+    }
+}
