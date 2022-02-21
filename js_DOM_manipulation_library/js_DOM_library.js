@@ -132,8 +132,27 @@ class Element {
             this.element.appendChild(child)
         } 
         // or has DOM element property
-        else if(child.element instanceof HTMLElement){
-            child.element.appendChild(this.element)
+        else if(child.element && child.element instanceof HTMLElement){
+            this.element.appendChild(child.element)
+        }
+        // check if child is an array containing child elements
+        else if(Array.isArray(child)) {
+            for(let childElem of child) {
+                // check if child is DOM element
+                if (childElem instanceof HTMLElement) {
+                    this.element.appendChild(childElem)
+                } 
+                // or has DOM element property
+                else if(childElem.element && childElem.element instanceof HTMLElement){
+                    this.element.appendChild(childElem.element)
+                }
+                else {
+                    console.error("Child element is not or doesn't have a DOM element property!")
+                }
+            }
+        }
+        else if(typeof child === 'object') {
+            console.error('Child property cannot be typeof object. It must be a DOM element, or Element instance, or an array containing child elements.')
         }
         else {
             console.error("Child element is not a DOM element!")
@@ -179,7 +198,7 @@ class Element {
                     this.element.setAttribute(key, value)
                 }
             } else if(key === "event") {
-                this.event(key.event, key.callback)
+                this.event(value.name, value.callback)
             } else {
                 this.element.setAttribute(key, value)
             }          
