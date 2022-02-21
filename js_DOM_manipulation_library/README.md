@@ -16,7 +16,7 @@ const app = elem('div')
 app.childOf(<DOM_element_name>)
 ```
 
-`<DOM_element_name>` must be an instance of a library item like 
+`<DOM_element_name>` must be an instance of a library item 
 or
 actual DOM element like `document.getElementById('app')`
 
