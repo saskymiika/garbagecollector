@@ -2,7 +2,7 @@
 # Custom JavaScript library for DOM manipulation.
 ## This library is a work in progress.
 
-### Why to write
+### Reduce this
 ```
 const app = document.createElement('div')
 app.setAttribute('id', 'app')
@@ -18,9 +18,34 @@ const subTitle = document.createElement('h3')
 subTitle.innerText = 'Please chill and have a good one!'
 subTitle.setAttribute('class', 'site-title')
 app.appendChild(subTitle)
+
+const navbar = document.createElement('nav')
+navbar.setAttribute('class', 'navigation-bar slim')
+app.appendChild(navbar)
+
+const list = document.createElement('ul')
+list.setAttribute('class', 'menu')
+navbar.appendChild(list)
+
+const listItem = document.createElement('li')
+listItem.innerText = 'list item number One'
+listItem.setAttribute('class', 'list-item menu-item')
+list.appendChild(listItem)
+
+const listItem2 = document.createElement('li')
+listItem2.innerText = 'list item number Two'
+listItem2.setAttribute('class', 'list-item menu-item')
+list.appendChild(listItem2)
+
+const listItem3 = document.createElement('li')
+listItem3.innerText = 'list item number Three'
+listItem3.setAttribute('class', 'list-item menu-item')
+list.appendChild(listItem3)
+
+// etc...
 ```
 
-### If we can do the same with:
+### to this:
 ```
 const app = elem('div')
 app.attrbs({id: 'app', class: 'main container'})
@@ -32,7 +57,15 @@ title.attrbs({class: 'main site-title'})
 const subTitle = elem('h3', 'Please chill and have a good one!')
 subTitle.attrbs({class: 'site-title'})
 
-app.parentOf([title, subTitle])
+const navbar = elem('nav')
+navbar.attrbs({class: 'navigation-bar slim'})
+app.parentOf([title, subTitle, navbar])
+
+const ul = elem('ul')
+ul.attrbs({class: 'menu'})
+ul.childOf(navbar)
+
+ul.list('li', {class: 'list-item menu-item'}, ['list item number One', 'list item number Two', 'list item number Three'])
 ```
 
 ### How to use:
