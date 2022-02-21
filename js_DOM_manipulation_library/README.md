@@ -68,7 +68,7 @@ ul.childOf(navbar)
 ul.list('li', {class: 'list-item menu-item'}, ['list item number One', 'list item number Two', 'list item number Three'])
 ```
 
-### How to use:
+## How to use:
 
 - Create element:
 ```
