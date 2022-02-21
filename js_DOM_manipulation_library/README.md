@@ -14,6 +14,9 @@ const app = elem('div')
 
 // to add element to the document use
 app.childOf(<DOM_element_name>)
+
+// if we have parent element, we can also use
+parent.parentOf(app)
 ```
 
 `<DOM_element_name>` must be an instance of a library item 
