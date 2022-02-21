@@ -2,6 +2,39 @@
 # Custom JavaScript library for DOM manipulation.
 ## This library is a work in progress.
 
+### Why to write
+```
+const app = document.createElement('div')
+app.setAttribute('id', 'app')
+app.setAttribute('class', 'main container')
+document.body.appendChild(app)
+
+const title = document.createElement('h1')
+title.innerText = 'Welcome to the website!'
+title.setAttribute('class', 'main site-title')
+app.appendChild(title)
+
+const subTitle = document.createElement('h3')
+subTitle.innerText = 'Please chill and have a good one!'
+subTitle.setAttribute('class', 'site-title')
+app.appendChild(subTitle)
+```
+
+### If we can do the same with:
+```
+const app = elem('div')
+app.attrbs({id: 'app', class: 'main container'})
+app.childOf(document.body)
+
+const title = elem('h1', 'Welcome to the website!')
+title.attrbs({class: 'main site-title'})
+
+const subTitle = elem('h3', 'Please chill and have a good one!')
+subTitle.attrbs({class: 'site-title'})
+
+app.parentOf([title, subTitle])
+```
+
 ### How to use:
 
 - Create element:
