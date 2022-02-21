@@ -2,7 +2,7 @@
 # Custom JavaScript library for DOM manipulation.
 ## This library is a work in progress.
 
-### Reduce this
+### Reduce this:
 ```
 const app = document.createElement('div')
 app.setAttribute('id', 'app')
