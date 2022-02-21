@@ -35,13 +35,13 @@ const p2 = elem('p', 'This is my second paragraph which is also a child element.
 
 app.parentof([title, p1, p2])
 
-/* OUTPUT:
+OUTPUT:
   <div>
     <h1>Welcome</h1>
     <p>This is my useful paragraph.</p>
     <p>This is my second paragraph which is also a child element.</p>
   </div>
-*/
+
 ```
 > TIP: If you use elem() function as constructor, the first argument defines the type of the element. Second argument will be inserted to the element as inner text value. This is useful if using text based elements.
 
@@ -140,7 +140,7 @@ let listData = ['First', 'Second', 'Third', 'Fourth', 'Fifth']
 
 ul.list(listElement, listElementAttributes, listData)
 
-/* OUTPUT:
+OUTPUT:
 <div>
   <ul>
     <li id="this-works-too" class="ul-list-item">First</li>
@@ -150,7 +150,7 @@ ul.list(listElement, listElementAttributes, listData)
     <li id="this-works-too-4" class="ul-list-item">Fifth</li>
   </ul>
 </div>
-*/
+
 ```
 
 - Create list but with link items
@@ -204,7 +204,7 @@ let listData = [
 // create the list...
 ul.list(listElement, listElementAttributes, listData)
 
-/* OUTPUT:
+OUTPUT:
 <div>
   <ul>
     <li id="this-works-too" class="ul-list-item">
@@ -218,7 +218,6 @@ ul.list(listElement, listElementAttributes, listData)
     </li>
   </ul>
 </div>
-*/
 ```
 
 - Add event to the element
@@ -289,10 +288,9 @@ app.attrbs({id: 'main-container', class: 'container'})
 const app2 = elem('div')
 app2.attrbs({id: 'main-container', class: 'container'})
 
-/* OUTPUT:
+OUTPUT:
   <div id="main-container" class="container"></div>
   <div id="main-container-1" class="container"></div>
-*/
 ```
 
 > If we set an attribute with property name 'event', we can assing an event to the element.
@@ -308,9 +306,8 @@ button.attrbs({class: 'greet-btn', event: {
     console.log(e.target.className)
 }}})
 
-/* CONSOLE OUTPUT:
+CONSOLE OUTPUT:
 > button was clicked
 > BUTTON
 > greet-btn
-*/
 ```
