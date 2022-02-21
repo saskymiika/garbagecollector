@@ -253,7 +253,7 @@ app.empty()
 
 ## Example of list method
 > The list method would work the best if we used something like array.map() with it.
-> We could fetch data from back end and then use the list() method to costruct the link items
+> We could fetch data from back end and then use the list() method to construct the link items
 
 ```
 // EXAMPLE OF FETCHING A LIST OF MOVIES FROM THE BACK END
