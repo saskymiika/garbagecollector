@@ -100,10 +100,10 @@ app.cc(element, childAttributes, *innerHtml)
 const ul = elem('ul')
 ul.childOf(app)
 
-// create list of li elements
-
+// Let's create li elements into the unordered list
 let listElement = 'li'
 
+// list item attributes, apply to every list item
 let listElementAttributes = {
   id: 'this-works-too'
   class: 'ul-list-item'
@@ -121,6 +121,73 @@ ul.list(listElement, listElementAttributes, listData)
     <li id="this-works-too-2" class="ul-list-item">Third</li>
     <li id="this-works-too-3" class="ul-list-item">Fourth</li>
     <li id="this-works-too-4" class="ul-list-item">Fifth</li>
+  </ul>
+</div>
+*/
+```
+
+- Create list but with link items
+> if we want to create list with link items, then we would want to put additional data into the listData array:
+
+```
+// create ul object
+const ul = elem('ul')
+ul.childOf(app)
+
+// Let's create li elements into the unordered list
+let listElement = 'li'
+
+// list item attributes, apply to every list item
+let listElementAttributes = {
+  id: 'this-works-too'
+  class: 'ul-list-item'
+}
+
+// each link item must use this specific structure
+let listData = [
+  {
+    text: 'First', // the text value inside the link element
+    type: 'a', // specify the type of element <a></a> 
+    attributes: { // attributes object, specify all attibutes to the link item
+      class: 'list-link',
+      id: 'link',
+      href: 'https://example1.com'
+    }
+  },
+  {
+    text: 'Second', // the text value inside the link element
+    type: 'a', // specify the type of element <a></a> 
+    attributes: { // attributes object, specify all attibutes to the link item
+      class: 'list-link',
+      id: 'link',
+      href: 'https://example2.com'
+    }
+  },
+  {
+    text: 'Third', // the text value inside the link element
+    type: 'a', // specify the type of element <a></a> 
+    attributes: { // attributes object, specify all attibutes to the link item
+      class: 'list-link',
+      id: 'link',
+      href: 'https://example3.com'
+    }
+  }
+]
+
+ul.list(listElement, listElementAttributes, listData)
+
+/* OUTPUT:
+<div>
+  <ul>
+    <li id="this-works-too" class="ul-list-item">
+      <a id="link" class="list-link" href="https://example1.com">First</a>
+    </li>
+    <li id="this-works-too" class="ul-list-item">
+      <a id="link-2" class="list-link" href="https://example2.com">Second</a>
+    </li>
+    <li id="this-works-too" class="ul-list-item">
+      <a id="link-3" class="list-link" href="https://example3.com">Third</a>
+    </li>
   </ul>
 </div>
 */
