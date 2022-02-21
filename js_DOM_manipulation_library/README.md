@@ -271,8 +271,8 @@ app2.attrbs({id: 'main-container', class: 'container'})
 */
 ```
 
-> If we set an attribute with name of event, we can write/assign callback function right into the attribute.
-> The event must be passed as an event object, as below:
+> If we set an attribute with property 'event', we can assing an event, and callback function rigiht into the attribute.
+> The event must be passed as an event object with properties 'name' and 'callback' as shown below:
 ```
 // EXAMPLE:
 const button = elem('button')
