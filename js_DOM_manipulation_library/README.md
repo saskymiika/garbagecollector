@@ -102,7 +102,7 @@ app.text('My text value.')
 ```
 app.html('html as a string')
 ```
-> text() and html() methods will not append data to the element, but they will overwrite the existing data. Inner values are assigned to the element with use of `=` operator.
+> text() and html() methods will not append data to the element, but they will overwrite the existing data. Inner values are assigned to the element with `=` operator.
 
 - Create a child element into the element
 ```
