@@ -298,7 +298,7 @@ fecth('/movies')
   .then(movies => {
      ul.list('li', {class: 'list-item'}, movies)
 ```
-> But be aware, if you skip handling the data the risk of errors increase.
+> BUT: if you skip handling the data, the risk of errors increase.
 > Using the ChildProps constructor is for sure the safest way to get right data format.
 
 ## Attribute behavior
