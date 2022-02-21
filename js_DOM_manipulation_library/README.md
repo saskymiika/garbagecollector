@@ -299,7 +299,7 @@ fecth('/movies')
      ul.list('li', {class: 'list-item'}, movies)
 ```
 > BUT: if you skip handling the data, the risk of errors increase.
-> To make sure we are always using the right data format, use `ChildProps` constructor.
+> To make sure that we are always using the right data format we can use `ChildProps` constructor.
 
 ## Attribute behavior
 > Attributes can be set to any element of choice and they will behave the normal way.
