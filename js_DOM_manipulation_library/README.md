@@ -276,7 +276,7 @@ fecth('/movies')
     ul.list('li', {class: 'list-item'}, listData)
   })
 ```
-or with the help of ChildProps constructor
+> or with the help of `ChildProps` constructor
 ```
 const ul = elem('ul')
 
