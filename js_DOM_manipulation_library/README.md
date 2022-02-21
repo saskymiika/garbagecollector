@@ -272,7 +272,6 @@ fecth('/movies')
           href: item.arrtibute.href
         }
     }))
-    
     ul.list('li', {class: 'list-item'}, listData)
   })
 ```
@@ -284,7 +283,6 @@ fecth('/movies')
   .then(data => data.json())
   .then(movies => {
     let listData = movies.map(item => new ChildProps(item.name, item.type, {class: item.attribute.class, href: item.arrtibute.href}, item.event))
-    
     ul.list('li', {class: 'list-item'}, listData)
 ```
 > TIP: If you have already defined attributes in the right format in the back end, it will look much cleaner in the constructor
@@ -297,6 +295,7 @@ fecth('/movies')
   .then(data => data.json())
   .then(movies => {
      ul.list('li', {class: 'list-item'}, movies)
+  })
 ```
 > BUT: if you skip handling the data, the risk of errors increase.
 > To make sure that we are always using the right data format we can use `ChildProps` constructor.
