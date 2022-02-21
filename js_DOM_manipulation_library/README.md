@@ -33,7 +33,7 @@ const title = elem('h1', 'Welcome!')
 const p1 = elem('p', 'This is my useful paragraph.')
 const p2 = elem('p', 'This is my second paragraph which is also a child element.')
 
-app.parentof([title, p1, p2])
+app.parentOf([title, p1, p2])
 
 OUTPUT:
   <div>
