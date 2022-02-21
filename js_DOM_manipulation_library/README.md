@@ -193,3 +193,34 @@ ul.list(listElement, listElementAttributes, listData)
 </div>
 */
 ```
+
+- Add event to the element
+```
+// let's create buttom element
+const button = elem('button')
+
+// insert inner text to the button
+button.text('Click me!')
+
+//create callback function to the event
+const myClickEvent = (event) => { //
+  console.log('I have clicked the button element!')
+}
+
+// add event to  the button
+button.event('click', myClickEvent)
+```
+
+- Remove the item
+```
+// use the previous button element in this example
+
+// remove the button element
+button.delete()
+```
+
+- Remove every child element inside the element
+```
+// remove every child element inside the app container
+app.empty()
+```
