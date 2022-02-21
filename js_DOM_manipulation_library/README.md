@@ -263,18 +263,29 @@ const ul = elem('ul')
 fecth('/movies')
   .then(data => data.json())
   .then(movies => {
-    let listData = movies.map(item => {
-        text: item.textvalue
+    let listData = movies.map(item => ({
+        text: item.name
         type: item.type
         attributes: { 
           class: item.attribute.class,
           id: item.attribute.id,
           href: item.arrtibute.href
         }
-    })
+    }))
     
     ul.list('li', {class: 'list-item'}, listData)
   })
+```
+or with the help of ChildProps constructor
+```
+const ul = elem('ul')
+
+fecth('/movies')
+  .then(data => data.json())
+  .then(movies => {
+    let listData = movies.map(item => new ChildProps(item.name, item.type, {class: item.attribute.class, href: item.arrtibute.href}, item.event))
+    
+    ul.list('li', {class: 'list-item'}, listData)
 ```
 
 ## Attribute behavior
