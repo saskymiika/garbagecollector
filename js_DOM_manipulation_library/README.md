@@ -255,7 +255,7 @@ fecth('/movies')
 ```
 
 ## Attribute behavior
-> Attributes can be set to any element of choice and will behave the same way as they would behave the normal way.
+> Attributes can be set to any element of choice and they will behave normally.
 > BUT if we attempt to set multiple ids with the same value, the value will be modified with 'dash' and 'number'.
 ```
 // EXAMPLE:
