@@ -43,7 +43,7 @@ app.parentof([title, p1, p2])
   </div>
 */
 ```
-> TIP: The first argument in the constructor defines the type of the element. Second argument will be inserted to the element as inner text value. This is useful with text based elements.
+> TIP: The first argument in the constructor defines the type of the element. Second argument will be inserted to the element as inner text value. This is useful on text based elements.
 
 
 - Create item from already existing DOM element
