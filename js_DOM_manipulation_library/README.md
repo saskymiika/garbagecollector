@@ -253,3 +253,37 @@ fecth('/movies')
     ul.list('li', {class: 'list-item'}, listData)
   })
 ```
+
+## Attribute behavior
+> Attributes can be set to any element of choice and will behave the same way as they would behave the normal way.
+> BUT if we attempt to set multiple ids with the same value, the value will be modified with 'dash' and 'number'.
+```
+// EXAMPLE:
+const app = elem('div')
+app.attrbs({id: 'main-container', class: 'container'})
+
+const app2 = elem('div')
+app2.attrbs({id: 'main-container', class: 'container'})
+
+/* OUTPUT:
+  <div id="main-container" class="container"></div>
+  <div id="main-container-1" class="container"></div>
+*/
+```
+
+> If we set an attribute with name of event, we can write/assign callback function right into the attribute value.
+```
+// EXAMPLE:
+const button = elem('button')
+button.attrbs({class: 'greet-btn', event: function(e) {
+  console.log("button was clicked")
+  console.log(e.nodeName)
+  console.log(this.className)
+}})
+
+/* CONSOLE OUTPUT:
+> button was clicked
+> BUTTON
+> greet-btn
+*/
+```
