@@ -224,3 +224,29 @@ button.delete()
 // remove every child element inside the app container
 app.empty()
 ```
+
+## Example of list method
+> The list method would work the best if we used something like array.map() with it.
+> We could fetch data from back end and then use the list() method to costruct the link items
+
+```
+// EXAMPLE OF FETCHING A LIST OF MOVIES FROM THE BACK END
+
+const ul = elem('ul')
+
+fecth('/movies')
+  .then(data => data.json())
+  .then(movies => {
+    let listData = movies.map(item => {
+        text: item.textvalue
+        type: item.type
+        attributes: { 
+          class: item.attribute.class,
+          id: item.attribute.id,
+          href: item.arrtibute.href
+        }
+    })
+    
+    ul.list('li', {class: 'list-item'}, listData)
+  })
+```
