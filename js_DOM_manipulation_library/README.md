@@ -18,10 +18,33 @@ app.childOf(<DOM_element_name>)
 // if we have parent element, we can also use
 parent.parentOf(app)
 ```
-
 `<DOM_element_name>` must be an instance of a library item 
 or
 actual DOM element like `document.getElementById('app')`
+
+> You can append multiple child elements to the element with parentOf(), if you pass the child elements into an array.
+```
+// EXAMPLE
+// append child elements with parentOf() method
+
+const app = elem('div')
+
+const title = elem('h1', 'Welcome!')
+const p1 = elem('p', 'This is my useful paragraph.')
+const p2 = elem('p', 'This is my second paragraph which is also a child element.')
+
+app.parentof([title, p1, p2])
+
+/* OUTPUT:
+  <div>
+    <h1>Welcome</h1>
+    <p>This is my useful paragraph.</p>
+    <p>This is my second paragraph which is also a child element.</p>
+  </div>
+*/
+```
+> TIP: The first argument in the constructor defines the type of the element. Second argument will be inserted to the element as inner text value. This is useful with text based elements.
+
 
 - Create item from already existing DOM element
 ```
