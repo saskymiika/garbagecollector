@@ -9,7 +9,7 @@
 // to create a new div element, create constructor like this:
 const app = new Element('div')
 
-// or
+// or use
 const app = elem('div')
 
 // to add element to the document use
