@@ -287,6 +287,19 @@ fecth('/movies')
     
     ul.list('li', {class: 'list-item'}, listData)
 ```
+> TIP: If you have already defined attributes in the right format in the back end, it will look much cleaner in the constructor
+> ```
+> let listData = movies.map(item => new ChildProps(item.name, item.type, item.attributes, item.event))
+> ```
+> or maybe even set object ready as whole in back end, skip mapping completely:
+> ```
+> fecth('/movies')
+>   .then(data => data.json())
+>   .then(movies => {
+>      ul.list('li', {class: 'list-item'}, movies)
+> ```
+> But be aware, if you skip handling the data the risk of errors increase.
+> Using the ChildProps constructor is for sure the safest way to get right data format.
 
 ## Attribute behavior
 > Attributes can be set to any element of choice and they will behave the normal way.
