@@ -1,7 +1,7 @@
 
 # Dijkstra pathfinder
 
-Green block is our "character" which can be moved around with w,a,s,d keys. The red block represent enemies, which are following the path towardsd the player.
+Green block is our "character" which can be moved around with w,a,s,d keys. The red blocks represent enemies, which are following the path towards the player.
 
 The block point to the direction that leads to the player.
 
